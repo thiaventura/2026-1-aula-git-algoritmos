@@ -7,8 +7,8 @@ while True:
     print("\n=== TASK MANAGER V1.0 ===")
     print("1 - Criar tarefa")
     print("2 - Listar tarefas")
-    print("3 - Sair")
-    print("4 - Buscar por palavra-chave")
+    print("3 - Buscar por palavra-chave")
+    print("4 - Sair")
 
     opcao = input("\nEscolha uma opção: ")
 
@@ -37,10 +37,16 @@ while True:
                 print(f" {i}. {tarefa}")
 
     elif opcao == "3":
+        palavra = input("Buscar por: ")
+        encontradas = [t for t in tarefas if palavra.lower() in t.lower()]
+        if len(encontradas) == 0:
+            print("❌ Nenhuma tarefa encontrada")
+        else:
+            print("\n🔎 Resultados: ")
+        for i, tarefa in enumerate(encontradas, 1):
+            print(f"{i}. {tarefa}")
+
+    elif opcao == "4":
         # Subfunção: sair
         print("👋 Até logo!")
         break
-    elif opcao == "4":
-            palavra = input("Buscar por: ")
-            encontradas = [t for t in tarefas if palavra.lower() in t.lower()]
-            # Listar resultado
