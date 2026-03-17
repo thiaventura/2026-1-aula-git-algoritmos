@@ -1,3 +1,5 @@
+https://barretop15.me/algoritmos-programacao-unifg-2026/
+
 num1 = float(input("Digite o primeiro número: "))
 op = input("Digite a operação (+, -, *, /): ")
 num2 = float(input("Digite o segundo número: "))
